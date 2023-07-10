@@ -1,6 +1,90 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
-  font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFFFFF;
 }
 
+.topo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.logo {
+    margin-right: auto;
+
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+    margin-right: 20px;
+}
+
+.botao {
+    color: #0A99FE;
+    font-size: 20px;
+    font-weight: normal;
+    background-color: #0A99FE1A;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+
+}
+
+.botao:hover {
+    background-color: #0A99FE;
+    color: #e7eff8
+}
+
+.titulo {
+    font-size: 20px;
+    font-weight: normal; /*eu queria deixar como bold mas no enunciado pede normal*/
+    color: #1b1b1b;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.card {
+    background-color: #e4e0e0f6;
+    text-align: center;
+    flex: 0 0 207px;
+    width: 207px;
+    height: 275px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+
+.card .imagem {
+    width: 100%;
+    height: 60%;
+    object-fit:fill;
+    border-radius: 10px 10px 0 0;
+
+}
+
+.card .nome {
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: medium;
+    color: #1B1B1B;
+}
+
+.card .preco {
+    margin-top: 25px;
+    font-size: 16px;
+    color: #868383;
+
+}
+
+.pinturas-lista,
+.figurasAcao-lista {
+    display: flex;
+    overflow-x: scroll;
+
+
+}

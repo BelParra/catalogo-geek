@@ -68,25 +68,31 @@ const produtosArray = [
   },
 
 ];
+document.addEventListener("DOMContentLoaded", function () { //evitar erros de carregamento
 
-
-document.addEventListener("DOMContentLoaded", function () {
   const pinturasList = document.querySelector(".pinturas-lista");
   const actionFiguresList = document.querySelector(".figurasAcao-lista");
 
-  // Função para criar um item de produto
+  
+  const paintingsArray = [];
+  const actionFiguresArray = [];
+
+  
   function criarElementoProduto(produto) {
     const item = document.createElement("li");
     item.classList.add("card");
 
     const imagem = document.createElement("img");
-    imagem.setAttribute("src", produto.imagem); // Utilizando "imagem" em vez de "image"
+    imagem.classList.add('imagem');
+    imagem.setAttribute("src", produto.imagem);
     imagem.setAttribute("alt", produto.nome);
 
     const nome = document.createElement("h2");
+    nome.classList.add('nome')
     nome.textContent = produto.nome;
 
     const preco = document.createElement("p");
+    preco.classList.add('preco');
     preco.textContent = produto.preco;
 
     item.appendChild(imagem);
@@ -96,26 +102,26 @@ document.addEventListener("DOMContentLoaded", function () {
     return item;
   }
 
-  //Pinturas
-  function adicionarPintura(produto) {
-    const item = criarElementoProduto(produto);
-    pinturasList.appendChild(item);
-  }
-
-  //Figuras de Acção
-  function adicionarFigAcao(produto) {
-    const item = criarElementoProduto(produto);
-    actionFiguresList.appendChild(item);
-  }
-
-  // Adicionar às listas correspondentes
-
-  for (let i = 0; i < produtosArray.length; i++) {
-    const produto = produtosArray[i];
-    if (produto.tipo === "Pinturas") {
-      adicionarPintura(produto);
-    } else if (produto.tipo === "Figuras de Ação") {
-      adicionarFigAcao(produto);
+  function separateItems(produtosArray) {
+    for (let i = 0; i < produtosArray.length; i++) {
+      const produto = produtosArray[i];
+      if (produto.tipo === "Pinturas") {
+        const item = criarElementoProduto(produto);
+        paintingsArray.push(item);
+      } else if (produto.tipo === "Figuras de Ação") {
+        const item = criarElementoProduto(produto);
+        actionFiguresArray.push(item);
+      }
     }
+  }
+
+  separateItems(produtosArray);
+
+  for (let i = 0; i < paintingsArray.length; i++) {
+    pinturasList.appendChild(paintingsArray[i]);
+  }
+
+  for (let i = 0; i < actionFiguresArray.length; i++) {
+    actionFiguresList.appendChild(actionFiguresArray[i]);
   }
 });
