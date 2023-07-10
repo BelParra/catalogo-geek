@@ -15,7 +15,6 @@ body {
 
 .logo {
     margin-right: auto;
-
 }
 
 .botoes {
@@ -33,7 +32,6 @@ body {
     height: 40px;
     border-radius: 10px;
     border: none;
-
 }
 
 .botao:hover {
@@ -64,7 +62,6 @@ body {
     height: 60%;
     object-fit:fill;
     border-radius: 10px 10px 0 0;
-
 }
 
 .card .nome {
@@ -78,13 +75,10 @@ body {
     margin-top: 25px;
     font-size: 16px;
     color: #868383;
-
 }
 
 .pinturas-lista,
 .figurasAcao-lista {
     display: flex;
     overflow-x: scroll;
-
-
 }
