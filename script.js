@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () { //evitar erros de ca
     imagem.setAttribute("src", produto.imagem);
     imagem.setAttribute("alt", produto.nome);
 
-    const nome = document.createElement("h2");
+    const nome = document.createElement("h3");
     nome.classList.add('nome')
     nome.textContent = produto.nome;
 
