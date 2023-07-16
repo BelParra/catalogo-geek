@@ -3,9 +3,10 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #FFFFFF;
+    overflow-x: hidden;
 }
 
-.topo {
+.top {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -17,13 +18,13 @@ body {
     margin-right: auto;
 }
 
-.botoes {
+.buttons {
     display: flex;
     gap: 10px;
     margin-right: 20px;
 }
 
-.botao {
+.button {
     cursor: pointer;
     font-family: 'Roboto', sans-serif;
     color: #0A99FE;
@@ -36,15 +37,14 @@ body {
     border: none;
 }
 
-.botao:hover {
+.button:hover {
     background-color: #0A99FE;
     color: #e7eff8
 }
 
-.titulo {
+.title {
     font-size: 20px;
     font-weight: normal;
-    /*eu queria deixar como bold mas no enunciado pede normal*/
     color: #1b1b1b;
     margin-left: 20px;
     margin-bottom: 10px;
@@ -54,34 +54,34 @@ body {
     background-color: #e4e0e0f6;
     text-align: center;
     flex: 0 0 207px;
-    width: 207px;
+    width: 207em;
     height: 275px;
     margin: 10px;
     border-radius: 10px;
 }
 
-.card .imagem {
+.card .image {
     width: 100%;
     height: 60%;
     object-fit: fill;
     border-radius: 10px 10px 0 0;
 }
 
-.card .nome {
+.card .name {
     margin-top: 25px;
     font-size: 20px;
     font-weight: medium;
     color: #1B1B1B;
 }
 
-.card .preco {
+.card .price {
     margin-top: 25px;
     font-size: 16px;
     color: #868383;
 }
 
-.pinturas-lista,
-.figurasAcao-lista {
+.paintings-list,
+.actionFigures-list {
     display: flex;
     overflow-x: auto;
 }
